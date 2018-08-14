@@ -70,7 +70,7 @@ int main()
 
     for (int j = 0; j <= 10; j++)
     {
-        struct Node *tmp;
+        struct Node * tmp;
         tmp = head;
         printf("the value of index %d is %d the address is %p\n",j,tmp->id,tmp);
         head = head->next;
