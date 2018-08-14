@@ -6,8 +6,8 @@
 
 ## 创建单链表的两种方式
 1.  头插法：
-        s->next = head_->next; 
-        head->next = s;
+    s->next = head_->next; 
+    head->next = s;
 2.  尾插法：
-        head->next = s;
-        head = s;
+    head->next = s;
+    head = s;
