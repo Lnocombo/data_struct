@@ -11,7 +11,7 @@ struct Node
 // LinkList
 struct Node *lists = NULL;
 
-// LinkList
+// LinkList head node
 struct Node *head = NULL;
 
 struct Node *node = NULL;
@@ -20,16 +20,16 @@ static int id = 1;
 
 int main()
 {
-    lists = (struct Node*)malloc(sizeof(struct Node));
+    lists = (struct Node *)malloc(sizeof(struct Node));
     head = lists;
 
     // 加上头结点一共有 11 个节点
     for (int i = 0; i < 10; i++) 
     {
-        node = (struct Node*)malloc(sizeof(struct Node)); // 分配新的内存，存储链表元素 node
+        node = (struct Node *)malloc(sizeof(struct Node)); // 分配新的内存，存储链表元素 node
         node->id = id++;
 
-        // 尾插发（lists 和 node 指向的内存地址一直改变）
+        // 尾插法（lists 和 node 指向的内存地址一直改变）
         lists->next = node;
         lists = node;
     }
@@ -37,7 +37,7 @@ int main()
     // 打印链表元素数据，不包含头结点
     for (int j = 0; j <= 10; j++)
     {
-        struct Node * tmp;
+        struct Node *tmp;
         tmp = head;
         printf("the value of index %d is %d the address is %p\n",j,tmp->id,tmp);
         head = head->next;
